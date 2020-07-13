@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.liyiruo.gradle'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+//仓库的路经
+repositories {
+    mavenLocal()
+    mavenCentral()
+    /*先从本地找，再从中央仓库找*/
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
+    compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.8.0'
+    // https://mvnrepository.com/artifact/org.springframework/spring-context
+    compile group: 'org.springframework', name: 'spring-context', version: '5.2.7.RELEASE'
+
+}
